@@ -157,4 +157,5 @@ export const color = {
     800: '#e8590c',
     900: '#d9480f',
   },
+  transparent: 'transparent',
 };

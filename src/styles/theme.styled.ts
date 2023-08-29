@@ -6,5 +6,6 @@ export const theme = {
     inverse: color.white,
     primary: color.green[400],
     secondary: color.red[400],
+    transparent: color.transparent,
   },
 };
