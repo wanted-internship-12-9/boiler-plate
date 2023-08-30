@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import RootPage from '../pages/RootPage';
-import IssueList from '../components/IssueList';
-import IssueDetail from '../components/IssueDetail';
+import { RootPage } from '../pages/RootPage';
+import { IssueList } from '../components/IssueList';
+import { IssueDetail } from '../components/IssueDetail';
 
-const Router = () => {
+export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -17,5 +17,3 @@ const Router = () => {
     </BrowserRouter>
   );
 };
-
-export default Router;

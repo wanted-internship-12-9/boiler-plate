@@ -7,10 +7,10 @@ import {
   useRepoOwnerNameStore,
 } from '../../hooks/useStore';
 
-import Layout from '../Layout';
+import { Layout } from '../Layout';
 import * as S from './RootPage.styled';
 
-const RootPage = () => {
+export const RootPage = () => {
   const { repoOwnerName, changeRepoOwnerName } = useRepoOwnerNameStore();
   const { repoName, changeRepoName } = useRepoNameStore();
   const { isSearchMode, toggleIsSearchMode } = useIsSearchModeStore();
@@ -53,5 +53,3 @@ const RootPage = () => {
     </Layout>
   );
 };
-
-export default RootPage;

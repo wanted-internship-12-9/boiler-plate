@@ -4,7 +4,7 @@ import { useGetIssues } from '../../hooks/useGet';
 
 import * as S from './IssueList.styled';
 
-const IssueList = () => {
+export const IssueList = () => {
   const { data, error, isError, isLoading } = useGetIssues();
 
   if (isLoading) {
@@ -17,5 +17,3 @@ const IssueList = () => {
 
   return <S.Container>{data?.map(issue => <li key={issue.id}>{issue.title}</li>)}</S.Container>;
 };
-
-export default IssueList;
