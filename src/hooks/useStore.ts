@@ -40,6 +40,7 @@ export const useIsSearchModeStore = create<IsSearchModeStore>()(
 interface PageNumberStore {
   pageNumber: number;
   increasePageNumber: () => void;
+  initializePageNumber: () => void;
 }
 
 export const usePageNumberStore = create<PageNumberStore>()(
