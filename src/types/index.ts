@@ -1,4 +1,4 @@
-export interface IssueType {
+export interface Issue {
   url: string;
   repository_url: string;
   labels_url: string;
@@ -51,8 +51,8 @@ export interface IssueType {
   ];
   state: string;
   locked: boolean;
-  assignee: string;
-  assignees: string[];
+  assignee: Issue['user'];
+  assignees: Issue['user'][];
   milestone: string;
   comments: number;
   created_at: string;

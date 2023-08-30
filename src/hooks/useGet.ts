@@ -9,10 +9,10 @@ import {
   useRepoOwnerNameStore,
 } from './useStore';
 import { GITHUB_API_PATH } from '../api/apiConfig';
-import { IssueType } from '../types';
+import { Issue } from '../types';
 
 export const useGetIssues = () => {
-  const [data, setData] = useState<IssueType[] | null>(null);
+  const [data, setData] = useState<Issue[] | null>(null);
   const [error, setError] = useState<AxiosError | null>(null);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
