@@ -36,3 +36,16 @@ export const useIsSearchModeStore = create<IsSearchModeStore>()(
     toggleIsSearchMode: () => set(state => ({ isSearchMode: !state.isSearchMode })),
   })),
 );
+
+interface PageNumberStore {
+  pageNumber: number;
+  increasePageNumber: () => void;
+}
+
+export const usePageNumberStore = create<PageNumberStore>()(
+  devtools(set => ({
+    pageNumber: 1,
+    increasePageNumber: () => set(state => ({ pageNumber: state.pageNumber + 1 })),
+    initializePageNumber: () => set({ pageNumber: 1 }),
+  })),
+);
