@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useGetIssues } from '../../hooks/useGet';
+import { useGetIssues } from '../../hooks/useGetIssues';
 
 import { isMultipleOf } from '../../utils/isMultipleOf';
 import { BANNER_STANDARD_NUMBER, WANTED_BANNER_IMAGE_URL, WANTED_URL } from '../../constants';
