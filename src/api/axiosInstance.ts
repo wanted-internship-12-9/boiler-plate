@@ -10,7 +10,7 @@ axiosFetch.interceptors.request.use(
   config => {
     const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
 
-    if (githubToken) config.headers.Authorization = `${githubToken}`;
+    if (githubToken) config.headers.Authorization = `Bearer ${githubToken}`;
 
     return config;
   },
