@@ -14,6 +14,7 @@ import { IssueType } from '../types';
 export const useGetIssues = () => {
   const [data, setData] = useState<IssueType[] | null>(null);
   const [error, setError] = useState<AxiosError | null>(null);
+  const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const { isSearchMode } = useIsSearchModeStore();
@@ -25,6 +26,7 @@ export const useGetIssues = () => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
+      setIsError(false);
       try {
         const response = await axiosFetch.get(
           GITHUB_API_PATH.getIssues(repoOwnerName, repoName, pageNumber),
@@ -33,6 +35,7 @@ export const useGetIssues = () => {
         setData(data);
       } catch (error) {
         setError(error as AxiosError);
+        setIsError(true);
       }
     };
     if (!isSearchMode) {
@@ -44,6 +47,7 @@ export const useGetIssues = () => {
   return {
     data,
     error,
+    isError,
     isLoading,
   };
 };
