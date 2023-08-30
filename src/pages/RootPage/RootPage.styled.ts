@@ -60,7 +60,7 @@ export const Main = styled.main`
   min-height: 76vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
   overflow-y: scroll;
