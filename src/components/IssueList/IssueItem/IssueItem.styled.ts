@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 
 export const Container = styled.li`
   width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +13,7 @@ export const Container = styled.li`
   }
 `;
 
-export const Left = styled.div`
+export const Left = styled.section`
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -21,6 +22,9 @@ export const Left = styled.div`
 export const MainInfo = styled.div`
   font-size: 1.25rem;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const SubInfo = styled.div`
@@ -28,8 +32,9 @@ export const SubInfo = styled.div`
   color: #586069;
 `;
 
-export const Right = styled.div`
+export const Right = styled.section`
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 20%;
   min-width: 20%;
