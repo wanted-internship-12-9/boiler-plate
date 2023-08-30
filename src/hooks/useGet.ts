@@ -17,6 +17,7 @@ export const useGetIssues = () => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // FIXME: isSearchMode 로 useGetIssues 를 호출하는 로직을 분리해보기(클라/서버 상태 분리)
   const { isSearchMode } = useIsSearchModeStore();
   const { pageNumber } = usePageNumberStore();
   const { repoName } = useRepoNameStore();
